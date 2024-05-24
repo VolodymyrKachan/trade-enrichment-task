@@ -25,7 +25,6 @@ curl -X POST http://localhost:8080/api/v1/enrich \
      -F "file=@src/test/resources/trade.csv"
 ```
 
-Replace `<calculated when request is sent>` with the actual boundary calculated by `curl`.
 
 ### Step 4:
 **Expected Result:**
@@ -65,5 +64,3 @@ date,product_id,currency,price
 20160101,3,EUR,30.34
 20160101,11,EUR,35.34
 ```
-
-Make sure to replace the `<calculated when request is sent>` placeholder with the actual boundary calculated by `curl`.
