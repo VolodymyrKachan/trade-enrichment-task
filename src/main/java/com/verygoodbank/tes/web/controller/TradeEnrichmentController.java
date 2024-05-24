@@ -29,7 +29,7 @@ public class TradeEnrichmentController {
         this.enrichDataService = enrichDataService;
     }
 
-    @PostMapping(value = "/enrich", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.TEXT_PLAIN_VALUE)
+    @PostMapping(value = "/enrich", produces = MediaType.TEXT_PLAIN_VALUE)
     public ResponseEntity<String> enrichData(@RequestPart("file") MultipartFile trade) {
         if (trade.isEmpty()) {
             logger.warn("Uploaded file is empty");

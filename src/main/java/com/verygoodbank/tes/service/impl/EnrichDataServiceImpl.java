@@ -46,12 +46,6 @@ public class EnrichDataServiceImpl implements EnrichDataService {
     }
 
     public String processTradeData(MultipartFile file) {
-        if (file.isEmpty()) {
-            String errorMessage = "Uploaded file is empty";
-            logger.error(errorMessage);
-            throw new IllegalArgumentException(errorMessage);
-        }
-
         try (BufferedReader br = new BufferedReader(new InputStreamReader(file.getInputStream()))) {
             String line;
             List<String> enrichedData = new ArrayList<>();
